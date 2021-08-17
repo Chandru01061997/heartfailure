@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Heart Failure Detection-app</title>
+    </head>
+    <body style = "background-color: rgb(77, 187, 238);">
+        <h1 style="text-align: center;color: rgb(2, 6, 245);">Detect weather the patient will survive or not</h1>
+        <h3 style="text-align: center;color: rgb(43, 38, 32);">
+          Age-Integer value | Anaemia-Yes/No | Diabetes-Yes/No | HBP-Yes/No | Platelets-25k-850k |
+          Serum_sodium-Integer value | Time-Integer Value | Smoking-Patient smoking Yes/No
+        </h3>
+        <form action="/heartfailuredetection" method="POST">
+          <ul>
+            <li>
+              <label for='Age'>Age:</label>
+              <input type = 'number' name = 'age' placeholder = 'age' required = 'required' />
+            </li>
+            <li>
+              <label for='Anaemia'>Anaemia:</label>
+              <input type = 'text' name = 'anaemia' placeholder = 'anaemia' required = 'required' />
+            </li>
+            <li>
+              <label for='Diabetes'>Diabetes:</label>
+              <input type = 'text' name = 'diabetes' placeholder = 'diabetes' required = 'required' />
+            </li>
+            <li>
+              <label for='HBP'>HBP:</label>
+              <input type = 'text' name = 'high_blood_pressure' placeholder = 'high_blood_pressure' required = 'required' />
+            </li>
+            <li>
+              <label for='Platelets'>Platelets:</label>
+              <input type = 'number' name = 'platelets' placeholder = 'platelets' required = 'required' />
+            </li>
+            <li>
+              <label for='Serum_sodium'>Serum_sodium:</label>
+              <input type = 'number' name = 'serum_sodium' placeholder = 'serum_sodium' required = 'required' />
+            </li>
+            <li>
+              <label for='Time'>Time:</label>
+              <input type = 'number' name = 'time' placeholder = 'time' required = 'required' />
+            </li>
+            <li>
+              <label for='Smoking'>Smoking:</label>
+              <input type = 'text' name = 'smoking' placeholder = 'smoking' required = 'required' />
+            </li>
+            <button type = 'Submit'>Submit</button>
+            <li>
+              <label for="output">Prediction:</label>
+              <textarea id="text" name="output" placeholder="Predicted Result">{{final_output}}</textarea>
+            </li>
+          </ul>
+            <style>
+                form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 500px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid rgb(26, 25, 24);
+  border-radius: 1em;
+  color: rgb(30, 31, 27);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1.5em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 350px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 3px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: rgb(238, 10, 10);
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align:top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin: 2rem;
+  position:relative;
+}
+            </style>
+        </form>
+    </body>
+</html>
