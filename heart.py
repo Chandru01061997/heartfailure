@@ -33,7 +33,7 @@ def heartfailuredetection():
     sex = dic['sex'][sex]
     smoking = dic['smoking'][smoking]
 
-    prediction = model.predict([[int(age) , int(anaemia) , int(CPK), int(diabetes), int(ejection_fraction), int(platelets), int(serum_creatinine), int(serum_sodium), int(sex), int(smoking), int(time)]])
+    prediction = model.predict([[int(age) , int(anaemia) , int(CPK), int(diabetes), int(ejection_fraction), int(platelets), float(serum_creatinine), int(serum_sodium), int(sex), int(smoking), int(time)]])
 
     output = round(prediction[0] , 2)
     if output == 0:
